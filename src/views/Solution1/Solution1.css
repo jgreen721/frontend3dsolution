@@ -1,0 +1,98 @@
+.view-container {
+  background: var(--mainBg);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("./images/background-pattern-desktop.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  /* background: var(--heroBg);
+  height: 320px;
+  width: 100%; */
+  /* background-image: url("./images/background-pattern-desktop.svg"); */
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+.faq-header {
+  /* display: flex;
+  align-items: center;
+  gap: 1rem; */
+}
+
+.faq-card {
+  background: var(--white);
+  border-radius: 0.8rem;
+  width: clamp(50%, 600px, 90%);
+  margin: 0 auto;
+  padding: 4rem;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+@keyframes scaleup {
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scalecenter {
+  50% {
+    transform: scalex(1.5);
+  }
+  100% {
+    transform: scalex(1);
+  }
+}
+
+@keyframes scrollimg {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spinleft {
+  100% {
+    transform: translateX(0%) rotateY(1080deg);
+  }
+}
+
+.questions-list {
+  margin-top: 3rem;
+}
+
+@keyframes slideright {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .view-container {
+    background-image: url("./images/background-pattern-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .faq-card {
+    padding: 2rem;
+  }
+
+  /* .carousel {
+    width: 200px;
+  }
+
+  .carousel-item {
+    height: 50px;
+    width: 50px;
+  } */
+}

@@ -1,0 +1,54 @@
+.carousel {
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 25%,
+    white 75%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 25%, white 75%, transparent);
+  transform: scaleX(0);
+  animation: scalecenter 0.5s 1s forwards;
+}
+
+/* @keyframes scaleup {
+  100% {
+    transform: scale(1);
+  }
+} */
+
+.carousel-list {
+  gap: 0.5rem;
+  display: flex;
+  animation: scrollimg 5s infinite linear;
+}
+
+/* @keyframes scrollimg {
+  100% {
+    transform: translateX(-50%);
+  }
+} */
+
+.carousel-item {
+  height: 75px;
+  width: 75px;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .carousel {
+    width: 200px;
+  }
+
+  .carousel-item {
+    height: 50px;
+    width: 50px;
+  }
+}

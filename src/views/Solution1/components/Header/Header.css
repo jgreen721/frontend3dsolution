@@ -1,0 +1,48 @@
+.faq-h1-div {
+  display: flex;
+}
+
+.faq-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* animation: slideright 1s forwards;
+  transform: translateX(-200%); */
+  overflow: hidden;
+  /* border: 3px solid green; */
+  width: fit-content;
+  padding-right: 5rem;
+}
+
+.img-div {
+  transform: scale(0);
+  animation: scaleup 1s forwards;
+}
+
+.one,
+.two,
+.three {
+  transform: scale(0);
+  animation: scaleup 1s var(--delay) forwards;
+}
+
+.four {
+  transform: translateX(200px);
+  animation: spinleft 1s 1s forwards;
+}
+
+.one {
+  --delay: 0.25s;
+}
+
+.two {
+  --delay: 0.5s;
+}
+
+.three {
+  --delay: 0.75s;
+}
+
+.four {
+  --delay: 1s;
+}

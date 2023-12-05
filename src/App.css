@@ -1,0 +1,22 @@
+.app[data-theme="default"] {
+  --mainBg: var(--lightpink);
+  --answerTextColor: var(--grayishpurple);
+  --heroBg: var(--darkpurple);
+  --mainFont: var(--workSans);
+}
+
+.app[data-theme="secondary"] {
+  --mainBg: var(--lightblue);
+  --answerTextColor: var(--grayishblue);
+  --heroBg: var(--darkblue);
+  --mainFont: var(--workSans);
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  max-width: 144rem;
+  margin: 0 auto;
+  border: 3px solid black;
+  font-family: var(--mainFont);
+}
