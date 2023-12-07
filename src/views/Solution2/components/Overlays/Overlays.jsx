@@ -29,7 +29,7 @@ const Overlays = () => {
         setOpacityFour(scroll.range(4 / 5, 1 / 5));   
         // console.log("Range",scroll.range(0,1/5))
         // console.log("Range",scroll.range(1/5,1/5))
-        console.log("Range",scroll.curve(2/5,1/5))
+        // console.log("Range",scroll.curve(2/5,1/5))
         
     })
   return (

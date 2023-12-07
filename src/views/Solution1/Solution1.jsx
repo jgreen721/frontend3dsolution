@@ -12,7 +12,7 @@ const Solution1 = ({setTheme,setSolution}) => {
 
 
   const handleQuestion = (question)=>{
-    setData((data)=>data.map(d=>d.id == question.id ? { ...d,isActive:true} : {...d,isActive:false}))
+    setData((data)=>data.map(d=>d.id == question.id ? { ...d,isActive:!question.isActive} : {...d,isActive:false}))
   }
   return (
     <div className="solution-1-parent view-container">
@@ -22,16 +22,16 @@ const Solution1 = ({setTheme,setSolution}) => {
         }} type="checkbox" /> */}
       </header>
 <section className="faq-card">
-  <div className="faq-header">
+  <div className="faq-header z-10">
     <Header/>
     <Carousel/>
   </div>
-  <ul className="questions-list">
+  <ul className="questions-list z-10">
     {data.map(question=>(
       <QuestionItem key={question.id} question={question} handleQuestion={handleQuestion}/>
     ))}
   </ul>
-  <button onClick={()=>setSolution((solution)=>solution=!solution)}>See 3d Solution</button>
+  <button className="solution-btn z-10" onClick={()=>setSolution((solution)=>solution=!solution)}>See 3d Solution</button>
 </section>
     </div>
   )

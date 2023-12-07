@@ -36,6 +36,33 @@
   overflow: hidden;
 }
 
+.faq-card::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  content: "";
+  background: var(--grayishblue);
+  filter: blur(45px);
+  opacity: 50%;
+}
+
+.solution-btn {
+  background: transparent;
+  border: 4px solid transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: 0.5s ease;
+  background: var(--grayishpurple);
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.solution-btn:hover {
+  box-shadow: 1px 1px 1px black, 1px 1px 10px black, 1px 1px 15px var(--heroBg);
+}
+
 @keyframes scaleup {
   50% {
     transform: scale(1.5);
