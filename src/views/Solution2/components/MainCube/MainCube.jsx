@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei'
 import { Float } from '@react-three/drei'
 
 const MainCube = () => {
-    const img = useGLTF("./faqcube.glb");
+    const img = useGLTF("./faqcube2.glb");
     const [scale,setScale] = useState(1)
     const [pos,setPos] = useState([0,-3.5,1])
 

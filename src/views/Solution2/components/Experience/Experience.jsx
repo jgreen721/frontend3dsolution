@@ -20,17 +20,17 @@ const Experience = () => {
 
         tl.current = gsap.timeline({duration:4})
 if(innerWidth > 750){
-        tl.current.to(cubeRef.current.position,{x:2},.5)
+        tl.current.to(cubeRef.current.position,{x:2,z:1.5},.5)
         tl.current.to(cubeRef.current.rotation,{y:-1.5},.5)
-        tl.current.to(cubeRef.current.position,{x:-2},1.5)
-        tl.current.to(cubeRef.current.rotation,{y:1.5},1.5)
-        tl.current.to(cubeRef.current.position,{x:2},2.5)
-        tl.current.to(cubeRef.current.rotation,{y:2.5},2.5)
-        tl.current.to(cubeRef.current.position,{x:-2},3.5)
+        tl.current.to(cubeRef.current.position,{x:-1.75},1.5)
+        tl.current.to(cubeRef.current.rotation,{y:1.75},1.5)
+        tl.current.to(cubeRef.current.position,{x:1,z:2.75},2.5)
+        tl.current.to(cubeRef.current.rotation,{y:2.75},2.5)
+        tl.current.to(cubeRef.current.position,{x:-1,z:1},3.5)
         tl.current.to(cubeRef.current.rotation,{x:-1.75},3.5)
         tl.current.to(cubeRef.current.rotation,{y:-3.25},3.5)
-        tl.current.to(cubeRef.current.rotation,{y:0},3.5)
-        tl.current.to(cubeRef.current.rotation,{x:1},4)
+        // tl.current.to(cubeRef.current.rotation,{y:0},3.5)
+        // tl.current.to(cubeRef.current.rotation,{x:1},4)
 }
 else{
   // console.log("no changes!!")
