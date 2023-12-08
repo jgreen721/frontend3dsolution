@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url("./images/background-pattern-desktop.svg");
+  background-image: url("/images/background-pattern-desktop.svg");
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -105,7 +105,7 @@
 
 @media screen and (max-width: 375px) {
   .view-container {
-    background-image: url("./images/background-pattern-mobile.svg");
+    background-image: url("/images/background-pattern-mobile.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
