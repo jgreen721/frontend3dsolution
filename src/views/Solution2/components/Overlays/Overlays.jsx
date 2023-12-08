@@ -33,7 +33,7 @@ const Overlays = () => {
         
     })
   return (
-    <Scroll html>
+    <Scroll html style={{width:'100%'}}>
          <OverlaySection className="start">
             {/* <h2 className="question-h2">
             What is Frontend Mentor, and how will it help me?
