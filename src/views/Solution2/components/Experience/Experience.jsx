@@ -1,5 +1,6 @@
 import React, {useRef, useLayoutEffect} from 'react'
 import MainCube from '../MainCube/MainCube'
+import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
 import gsap from "gsap"
 import { useScroll } from '@react-three/drei';
@@ -49,6 +50,9 @@ else{
     <>
     <group ref={cubeRef}>
     <MainCube/>
+    </group>
+    <group>
+      <Fella/>
     </group>
     </>
   )
