@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Header,Carousel,QuestionItem} from "./components"
 import "./Solution1.css"
 
-const Solution1 = ({setTheme,setSolution}) => {
+const Solution1 = ({setSolution}) => {
   const [data,setData]=useState([
     {id:1,question:"What is FrontEnd Mentor, and how will it help me?",answer:"Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building.",giph:"",isActive:false},
     {id:2,question:"Is FrontEnd Mentor free?",answer:"Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.",giph:"",isActive:false},

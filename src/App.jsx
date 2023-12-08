@@ -8,18 +8,16 @@ const Solutions={
 }
 
 function App() {
-  const [solution, setSolution] = useState(Solutions["solution2"])
-  const [theme,setTheme] = useState("default")
+  const [solution, setSolution] = useState(Solutions["solution1"])
 
   return (
     <div
-    data-theme={theme}
       // onClick={()=>{
       //   console.log("Fx fired!")
       //   setSolution((solution)=>solution = !solution)
       // }} 
       className="app">
-      {!solution ? <Solution1 setTheme={setTheme} setSolution={setSolution}/> : <Solution2 setSolution={setSolution}/>}
+      {!solution ? <Solution1 setSolution={setSolution}/> : <Solution2 setSolution={setSolution}/>}
     </div>
   )
 }

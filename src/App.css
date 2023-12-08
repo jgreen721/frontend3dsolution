@@ -1,4 +1,4 @@
-.app[data-theme="default"] {
+/* .app[data-theme="default"] {
   --mainBg: var(--lightpink);
   --answerTextColor: var(--grayishpurple);
   --heroBg: var(--darkpurple);
@@ -10,7 +10,7 @@
   --answerTextColor: var(--grayishblue);
   --heroBg: var(--darkblue);
   --mainFont: var(--workSans);
-}
+} */
 
 .app {
   height: 100vh;
@@ -19,4 +19,8 @@
   margin: 0 auto;
   border: 3px solid black;
   font-family: var(--mainFont);
+  --mainBg: var(--lightpink);
+  --answerTextColor: var(--grayishpurple);
+  --heroBg: var(--darkpurple);
+  --mainFont: var(--workSans);
 }
