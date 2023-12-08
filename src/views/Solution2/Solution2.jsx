@@ -12,6 +12,7 @@ const Solution2 = ({setSolution}) => {
       <div className="dev-info-modal">
         <div className="dev-info-content">
       <button className="solution-btn"  onClick={()=>setSolution((solution)=>solution = !solution)}>Solution 1</button>
+      <h2 style={{color:"white",marginTop:'1.25rem'}}>(SCROLL To animate Cube)</h2>
         </div>
       </div>
       <Canvas style={{height:'100vh'}}  shadows>
