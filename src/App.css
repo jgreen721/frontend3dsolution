@@ -17,7 +17,7 @@
   width: 100vw;
   max-width: 144rem;
   margin: 0 auto;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   font-family: var(--mainFont);
   --mainBg: var(--lightpink);
   --answerTextColor: var(--grayishpurple);
