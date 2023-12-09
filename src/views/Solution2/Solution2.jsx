@@ -1,13 +1,14 @@
-import React, {useRef, useEffect, useState} from 'react'
+import React, { Suspense} from 'react'
 import {Canvas} from "@react-three/fiber"
-import {Box} from "@react-three/drei"
 import {Experience,Overlays} from "./components"
-import {ScrollControls} from "@react-three/drei"
+import {ScrollControls,useProgress} from "@react-three/drei"
 import "./Solution2.css"
 
 const Solution2 = ({setSolution}) => {
+  const progress = useProgress();
 
-  return (
+
+  return  (
     <div className="canvas-container">
       <div className="dev-info-modal">
         <div className="dev-info-content">
@@ -16,6 +17,7 @@ const Solution2 = ({setSolution}) => {
         </div>
       </div>
       <Canvas style={{height:'100vh'}}  shadows>
+        <Suspense fallback={()=><h1>Loading</h1>}>
         <color attach="background" args={["black"]}/>
           <ambientLight/>
           <directionalLight position={[-.75,1,0]} castShadow={true}/>
@@ -25,9 +27,10 @@ const Solution2 = ({setSolution}) => {
     <Overlays/>
     </ScrollControls>
     {/* <Floor/> */}
+    </Suspense>
       </Canvas>
     </div>
-  )
+  ) 
 }
 
 export default Solution2
