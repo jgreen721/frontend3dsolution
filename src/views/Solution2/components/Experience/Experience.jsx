@@ -5,6 +5,16 @@ import { useFrame } from '@react-three/fiber';
 import gsap from "gsap"
 import {  useScroll } from '@react-three/drei';
 
+
+
+const LoadingMsg = ()=>{
+
+
+  return(
+    <Text color="pink">Loading Assets</Text>
+  )
+}
+
 const Experience = () => {
     const cubeRef = useRef();
     const tl = gsap;
@@ -53,8 +63,9 @@ else{
 
 
   return (
-    <>
+    <Suspense fallback={LoadingMsg}>
 
+    <>
     <group ref={cubeRef}>
     <MainCube/>
     </group>
@@ -62,6 +73,7 @@ else{
       <Fella/>
     </group>
     </>
+    </Suspense>
   ) 
 }
 

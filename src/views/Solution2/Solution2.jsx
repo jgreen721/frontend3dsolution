@@ -5,13 +5,7 @@ import {ScrollControls,useProgress} from "@react-three/drei"
 import "./Solution2.css"
 
 
-const LoadingMsg = ()=>{
 
-
-  return(
-    <Text color="red">Loading Assets</Text>
-  )
-}
 
 const Solution2 = ({setSolution}) => {
   const progress = useProgress();
@@ -33,8 +27,8 @@ const Solution2 = ({setSolution}) => {
           <directionalLight position={[0,0,2]}/>
           <ScrollControls pages={5}>
             <Suspense fallback={LoadingMsg}>
-    <Experience/>
-    </Suspense>
+                <Experience/>
+            </Suspense>
     <Overlays/>
     </ScrollControls>
     {/* <Floor/> */}
