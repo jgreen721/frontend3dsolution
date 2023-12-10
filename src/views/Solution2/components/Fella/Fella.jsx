@@ -51,7 +51,7 @@ const Fella = () => {
             }
         // }
         })
-    },[showRunning,showWaving]);
+    },[]);
 
 
     console.log("Progress:",progress.progress + "%")
