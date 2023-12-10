@@ -6,9 +6,7 @@ import { useFrame } from '@react-three/fiber';
 const Fella = () => {
     const img = useGLTF("./nerdfellawithanimations.glb")
     const { actions, mixer } = useAnimations(img.animations, img.scene);
-    const scroll = useScroll();
-    const [showRunning,setShowRunning] = useState(false)
-    const [showWaving,setShowWaving] = useState(false)
+  
     const [pos,setPOS] = useState([-.3,-1,3.5])
     const progress = useProgress();
     // const tl = useRef();
@@ -35,7 +33,7 @@ const Fella = () => {
         // setActiveMixer(mixer);
     
         img.animations.forEach((clip) => {
-            console.log(clip)
+            // console.log(clip)
             // if(clip.name == "Breathing"){
             // const action = mixer.clipAction(clip);
             // action.play();
