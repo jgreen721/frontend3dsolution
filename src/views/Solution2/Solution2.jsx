@@ -17,7 +17,7 @@ const Solution2 = ({setSolution}) => {
         </div>
       </div>
       <Canvas style={{height:'100vh'}}  shadows>
-        <Suspense fallback={()=><h1>Loading</h1>}>
+        {/* <Suspense fallback={()=><h1>Loading</h1>}> */}
         <color attach="background" args={["black"]}/>
           <ambientLight/>
           <directionalLight position={[-.75,1,0]} castShadow={true}/>
@@ -27,7 +27,7 @@ const Solution2 = ({setSolution}) => {
     <Overlays/>
     </ScrollControls>
     {/* <Floor/> */}
-    </Suspense>
+    {/* </Suspense> */}
       </Canvas>
     </div>
   ) 

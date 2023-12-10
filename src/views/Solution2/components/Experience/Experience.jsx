@@ -1,14 +1,15 @@
-import React, {useRef, useLayoutEffect} from 'react'
+import React, {useRef,useEffect, useLayoutEffect,Suspense} from 'react'
 import MainCube from '../MainCube/MainCube'
 import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
 import gsap from "gsap"
-import { useProgress, useScroll, Text } from '@react-three/drei';
+import {  useScroll } from '@react-three/drei';
 
 const Experience = () => {
     const cubeRef = useRef();
     const tl = gsap;
     const scroll = useScroll()
+   
 
 
     useFrame((state,delta)=>{
@@ -19,7 +20,7 @@ const Experience = () => {
 
     useLayoutEffect(()=>{
       tl.current = gsap.timeline({duration:4})
-
+if(cubeRef.current){
 if(innerWidth > 750){
         tl.current.to(cubeRef.current.position,{x:2,z:1.5},.5)
         tl.current.to(cubeRef.current.rotation,{y:-1.5},.5)
@@ -45,11 +46,15 @@ else{
   tl.current.to(cubeRef.current.rotation,{x:-1.55},3.5)
   // tl.current.to(cubeRef.current.rotation,{y:-3.25},3.5)
 }
+}
       
-    })
+    },[])
+
+
+
   return (
     <>
-  
+
     <group ref={cubeRef}>
     <MainCube/>
     </group>

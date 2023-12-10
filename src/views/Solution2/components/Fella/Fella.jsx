@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { useGLTF, useAnimations, useScroll } from '@react-three/drei'
+import { useGLTF, useAnimations, useScroll,useProgress,Text } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 // import gsap from "gsap"
 
@@ -10,6 +10,7 @@ const Fella = () => {
     const [showRunning,setShowRunning] = useState(false)
     const [showWaving,setShowWaving] = useState(false)
     const [pos,setPOS] = useState([-.3,-1,3.5])
+    const progress = useProgress();
     // const tl = useRef();
 
     useFrame((state,delta)=>{
@@ -55,13 +56,14 @@ const Fella = () => {
     },[showRunning,showWaving]);
 
 
+    console.log("Progress:",progress.progress + "%")
 
 
-  return (
+  return progress.progress == 100 ? (
     <group scale={.1} rotation={[0,Math.PI * 1.05,0]} position={pos}>
         <primitive object={img.scene}/>
     </group>
-  )
+  ) : <><Text>Loading Waving Fella</Text></>
 }
 
 export default Fella
