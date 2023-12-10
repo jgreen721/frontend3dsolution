@@ -32,7 +32,7 @@ const MainCube = () => {
        <primitive scale={scale} object={img.scene}/>
        </Float>
     </group>
-  ) : <><Text>Loading FAQ Cube Asset</Text></>
+  ) : <><Text color="purple">Loading FAQ Cube Asset</Text></>
 }
 
 export default MainCube

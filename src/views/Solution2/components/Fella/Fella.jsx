@@ -63,7 +63,7 @@ const Fella = () => {
     <group scale={.1} rotation={[0,Math.PI * 1.05,0]} position={pos}>
         <primitive object={img.scene}/>
     </group>
-  ) : <><Text>Loading Waving Fella</Text></>
+  ) : <><Text color="black">Loading Waving Fella</Text></>
 }
 
 export default Fella
