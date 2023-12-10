@@ -5,6 +5,13 @@ import {ScrollControls,useProgress} from "@react-three/drei"
 import "./Solution2.css"
 
 
+const LoadingMsg = ()=>{
+
+
+  return(
+    <Text color="red">Loading Assets</Text>
+  )
+}
 
 
 const Solution2 = ({setSolution}) => {
