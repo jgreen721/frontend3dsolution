@@ -1,9 +1,9 @@
-import React, {useRef,useEffect, useLayoutEffect,Suspense} from 'react'
+import React, {useRef, useLayoutEffect,Suspense} from 'react'
 import MainCube from '../MainCube/MainCube'
 import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
 import gsap from "gsap"
-import {  useScroll } from '@react-three/drei';
+import {  useScroll, Text } from '@react-three/drei';
 
 
 
@@ -63,7 +63,7 @@ else{
 
 
   return (
-    <Suspense fallback={LoadingMsg}>
+    <Suspense fallback={<LoadingMsg/>}>
 
     <>
     <group ref={cubeRef}>

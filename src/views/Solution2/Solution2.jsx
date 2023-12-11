@@ -1,4 +1,4 @@
-import React, { Suspense} from 'react'
+import React from 'react'
 import {Canvas} from "@react-three/fiber"
 import {Experience,Overlays} from "./components"
 import {ScrollControls,useProgress} from "@react-three/drei"
@@ -27,19 +27,15 @@ const Solution2 = ({setSolution}) => {
         </div>
       </div>
       <Canvas style={{height:'100vh'}}  shadows>
-        {/* <Suspense fallback={()=><h1>Loading</h1>}> */}
         <color attach="background" args={["black"]}/>
           <ambientLight/>
           <directionalLight position={[-.75,1,0]} castShadow={true}/>
           <directionalLight position={[0,0,2]}/>
           <ScrollControls pages={5}>
-            <Suspense fallback={LoadingMsg}>
                 <Experience/>
-            </Suspense>
     <Overlays/>
     </ScrollControls>
     {/* <Floor/> */}
-    {/* </Suspense> */}
       </Canvas>
     </div>
   ) 
