@@ -3,15 +3,14 @@ import MainCube from '../MainCube/MainCube'
 import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
 import gsap from "gsap"
-import {  useScroll, Text } from '@react-three/drei';
+import {  useScroll, Text, useProgress } from '@react-three/drei';
 
 
 
 const LoadingMsg = ()=>{
-
-
+        const progress = useProgress();
   return(
-    <Text color="pink">Loading Assets</Text>
+    <Text fontSize={.3} color="pink">Loading Assets {progress.progress}%</Text>
   )
 }
 
