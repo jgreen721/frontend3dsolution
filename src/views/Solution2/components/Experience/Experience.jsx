@@ -10,7 +10,10 @@ import {  useScroll, Text, useProgress } from '@react-three/drei';
 const LoadingMsg = ()=>{
         const progress = useProgress();
   return(
+    <>
     <Text fontSize={.3} color="pink">Loading Assets {progress.progress}%</Text>
+    <Text fontSize={.15}>(Please Be Patient! 🙂 )</Text>
+    </>
   )
 }
 
