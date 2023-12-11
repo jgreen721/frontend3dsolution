@@ -12,7 +12,7 @@ const LoadingMsg = ()=>{
   return(
     <>
     <Text fontSize={.3} color="pink">Loading Assets {progress.progress}%</Text>
-    <Text position={[0,-1,0]}fontSize={.15}>(Please Be Patient! 🙂 )</Text>
+    <Text position={[0,-1,0]} fontSize={.15}>(Please Be Patient! 🙂 )</Text>
     </>
   )
 }
