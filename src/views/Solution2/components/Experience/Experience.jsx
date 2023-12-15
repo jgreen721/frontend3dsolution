@@ -29,7 +29,7 @@ const Experience = () => {
         tl.current.seek(tl.current.duration() * scroll.offset)
         // console.log(tl.current.duration() * scroll.offset)
         if(cubeRef?.current && loading){
-          console.log('toggle Loading to false!')
+          // console.log('toggle Loading to false!')
           setLoading(false)
         }
     })
@@ -40,7 +40,6 @@ const Experience = () => {
      
 if(!loading){
 if(innerWidth > 750){
-  console.log("WTF?")
         tl.current.to(cubeRef.current.position,{x:2,z:1.5},.5)
         tl.current.to(cubeRef.current.rotation,{y:-1.5},.5)
         tl.current.to(cubeRef.current.position,{x:-1.75},1.5)
