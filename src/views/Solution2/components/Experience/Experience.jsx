@@ -1,4 +1,4 @@
-import React, {useRef,useEffect, useLayoutEffect,Suspense} from 'react'
+import React, {useRef,useEffect, useState,Suspense} from 'react'
 import MainCube from '../MainCube/MainCube'
 import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
@@ -20,20 +20,25 @@ const LoadingMsg = ()=>{
 const Experience = () => {
     const cubeRef = useRef();
     const tl = gsap;
-    const scroll = useScroll()
+    const scroll = useScroll();
+    const [loading,setLoading] = useState(true)
    
 
 
     useFrame((state,delta)=>{
         tl.current.seek(tl.current.duration() * scroll.offset)
         // console.log(tl.current.duration() * scroll.offset)
+        if(cubeRef?.current && loading){
+          console.log('toggle Loading to false!')
+          setLoading(false)
+        }
     })
 
 
     useEffect(()=>{
       tl.current = gsap.timeline({duration:4})
      
-
+if(!loading){
 if(innerWidth > 750){
   console.log("WTF?")
         tl.current.to(cubeRef.current.position,{x:2,z:1.5},.5)
@@ -60,9 +65,9 @@ else{
   tl.current.to(cubeRef.current.rotation,{x:-1.55},3.5)
   // tl.current.to(cubeRef.current.rotation,{y:-3.25},3.5)
 }
-// }
+}
       
-    },[])
+    },[loading])
 
 
 
