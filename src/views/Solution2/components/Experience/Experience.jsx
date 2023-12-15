@@ -1,4 +1,4 @@
-import React, {useRef, useLayoutEffect,Suspense} from 'react'
+import React, {useRef,useEffect, useLayoutEffect,Suspense} from 'react'
 import MainCube from '../MainCube/MainCube'
 import Fella from '../Fella/Fella'
 import { useFrame } from '@react-three/fiber';
@@ -30,10 +30,12 @@ const Experience = () => {
     })
 
 
-    useLayoutEffect(()=>{
+    useEffect(()=>{
       tl.current = gsap.timeline({duration:4})
-if(cubeRef.current){
+     
+
 if(innerWidth > 750){
+  console.log("WTF?")
         tl.current.to(cubeRef.current.position,{x:2,z:1.5},.5)
         tl.current.to(cubeRef.current.rotation,{y:-1.5},.5)
         tl.current.to(cubeRef.current.position,{x:-1.75},1.5)
@@ -58,7 +60,7 @@ else{
   tl.current.to(cubeRef.current.rotation,{x:-1.55},3.5)
   // tl.current.to(cubeRef.current.rotation,{y:-3.25},3.5)
 }
-}
+// }
       
     },[])
 
